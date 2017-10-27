@@ -1,0 +1,393 @@
+html, body{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+main{
+	height: calc(100% - 200px);
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/**************************************************
+Criado por: rplandrade
+GitHub: https://github.com/rplandrade
+**************************************************/
+.cabecalho{
+	height: 100px;
+	padding: 35px 10%;
+	margin: 0;
+	box-sizing: border-box;
+	background: #00292D;
+	vertical-align: middle;
+	border-bottom: 5px solid #139DA9;
+}
+.cabecalho__titulo{
+	width: 50%;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	box-sizing: border-box;
+	line-height: 100%;
+	font-family: 'Oswald', sans-serif;
+	font-size: 2em;
+	color: white;
+}
+.cabecalho__nav{
+	width: 50%;
+	margin: 0 0 0 -4px;
+	padding: 0;
+	display: inline-block;
+	box-sizing: border-box;
+}
+.cabecalho__nav__lista{
+	margin: 0;
+	padding: 0;
+	height: 2em;
+	width: 100%;
+}
+.cabecalho__nav__item{
+	margin: 0;
+	padding: 0;
+	height: 2.5em;
+	width: 5em;
+	line-height: 2.5em;
+	display: inline-block;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	color: #139DA9;
+	vertical-align: middle;
+	text-align: center;
+	float: right;
+}
+.cabecalho__nav__pagina-atual{
+	margin: 0;
+	padding: 0;
+	height: 2.5em;
+	width: 5em;
+	line-height: 2.5em;
+	display: inline-block;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	color: #a3dcdc;
+	background-image: linear-gradient(to bottom, #41ADAD, #08333B);
+	text-decoration:none; 
+	vertical-align: middle;
+	text-align: center;
+	float: right;
+}
+.nav__lista__link{
+	margin: 0;
+	padding: 0;
+	display: inline;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	color: #139DA9;	
+	text-decoration:none; 
+}
+
+/**************************************************
+Criado por: rafaeltanaka
+https://github.com/rafaeltanaka
+**************************************************/
+.hero {
+  box-sizing: border-box;
+  width: 100%;
+  height: 400px;
+  padding: 0 10%;
+  background: #00292D;
+}
+.intro {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  vertical-align: top;
+}
+.intro h1{
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font-family: 'Oswald', sans-serif;
+	font-size: 3.5em;
+	color: white;
+}
+.intro h3{
+	margin-top: 0;
+	padding-top: 0;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.7em;
+	color: white;
+}
+.intro p{
+	margin-top: 0;
+	padding-top: 0;
+	font-family: 'Open Sans', sans-serif;
+	color: #139DA9;
+}
+.carrossel {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  width: 70%;
+  height: 300px;
+  margin: 21.440px 0 0 -4px;
+}
+.carrossel--ativador {
+  position: relative;
+}
+.carrossel--ativador:nth-of-type(1):checked ~ .carrossel__controle:nth-of-type(1),
+.carrossel--ativador:nth-of-type(2):checked ~ .carrossel__controle:nth-of-type(2),
+.carrossel--ativador:nth-of-type(3):checked ~ .carrossel__controle:nth-of-type(3) {
+  display: block;
+  opacity: 1;
+  z-index: 10;
+}
+.carrossel--ativador:nth-of-type(1):checked ~ .carrossel__slide:nth-of-type(1) {
+  display: block;
+  background-image: url(http://via.placeholder.com/600x300);
+  background-size: cover;
+  background-position: center;
+}
+.carrossel--ativador:nth-of-type(2):checked ~ .carrossel__slide:nth-of-type(2) {
+  display: block;
+  background-image: url(http://via.placeholder.com/700x350);
+  background-size: cover;
+  background-position: center;
+}
+.carrossel--ativador:nth-of-type(3):checked ~ .carrossel__slide:nth-of-type(3) {
+  display: block;
+  background-image: url(http://via.placeholder.com/800x400);
+  background-size: cover;
+  background-position: center;
+}
+.carrossel--ativador:nth-of-type(1):checked ~ .carrossel__seletor .carrossel__seletor--indicador:nth-of-type(1),
+.carrossel--ativador:nth-of-type(2):checked ~ .carrossel__seletor .carrossel__seletor--indicador:nth-of-type(2),
+.carrossel--ativador:nth-of-type(3):checked ~ .carrossel__seletor .carrossel__seletor--indicador:nth-of-type(3) {
+  opacity: 1;
+}
+.carrossel__controle {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+}
+.carrossel__controle--anterior {
+  position: absolute;
+  left: 0;
+}
+.carrossel__controle--proximo {
+  position: absolute;
+  right: 0;
+}
+.carrossel__slide{
+  height: 100%;
+  position: absolute;
+  display: none;
+  overflow-y: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.carrossel__seletor {
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  margin-top: 300px;
+  text-align: center;
+}
+.carrossel__seletor--indicador {
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 100%;  
+  height: 15px;
+  width: 15px;
+  background-color: grey;
+  opacity: 0.5;
+}
+.carrossel__seletor--indicador:hover {
+  background-color: black;
+  opacity: 1;
+}
+
+/**************************************************
+Criado por: PoliGomes
+GitHub: https://github.com/PoliGomes
+**************************************************/
+.back {
+	background: linear-gradient(#F6F6F6, #F9F9F9);
+	padding: 0 10%;
+
+}
+.content {
+	box-sizing: border-box;
+	display: inline-block;
+	vertical-align: center;
+	width: 100%;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	font-family: 'Raleway', sans-serif;
+	box-shadow: -1px -10px 15px -10px gray;
+    padding: 0;
+    margin-top: 10px;
+ 	position: relative;
+}
+
+.content__features {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 30%;
+	padding: 2% 0;
+}
+.content__features+.content__features {
+	margin: 0 0 0 calc(5% - 5px);
+} 
+
+
+.content__features img {
+	margin-bottom: 15px;
+	width: 100%
+}
+.content__features__tittle {
+	display: inline;
+	color: #646464;
+	text-align: center;
+	position: relative;
+	bottom: 4px;
+
+}
+
+.content__features p {
+	font-size: 0.8em;
+	color: #A5A5A5;
+}
+
+.readmore {
+	border: 1px solid #DDDDDD;
+	border-radius: 20px;
+	color: #808080;
+	background: linear-gradient(#FBFBFB, #E5E5E5);
+	width: 80px;
+	height: 20px;
+	font-size: 0.6em;
+}
+
+/**************************************************
+Criado por: OrleansKlaus
+GitHub: https://github.com/OrleansKlaus
+**************************************************/
+.content{
+     margin: 30px;
+    }
+.botao01{
+     background: -webkit-linear-gradient(bottom, #E0E0E0, #F9F9F9 70%);
+     background: -moz-linear-gradient(bottom, #E0E0E0, #F9F9F9 70%);
+     background: -o-linear-gradient(bottom, #E0E0E0, #F9F9F9 70%);
+     background: -ms-linear-gradient(bottom, #E0E0E0, #F9F9F9 70%);
+     background: linear-gradient(bottom, #E0E0E0, #F9F9F9 70%);
+     border: 1px solid #CCCCCE;
+     border-radius: 3px;
+     box-shadow: 0 3px 0 rgba(0, 0, 0, .3),
+                   0 2px 7px rgba(0, 0, 0, 0.2);
+     color: #616165;
+     display: block;
+     font-family: "Trebuchet MS";
+     font-size: 14px;
+     font-weight: bold;
+     line-height: 25px;
+     text-align: center;
+     text-decoration: none;
+     text-shadow:1px 1px 0 #FFF;
+     padding: 5px 15px;
+     /*position: relative;*/
+     width: 80px;
+}
+ 
+.botao01:before{
+     border: 1px solid #FFF;
+     border-radius: 3px;
+     box-shadow: inset 0 -2px 12px -4px rgba(70, 70, 70, .2),
+                   inset 0 3px 2px -1px rgba(255, 255, 255, 1);
+     content: "";
+     bottom: 0;
+     left: 0;
+     right: 0;
+     top: 0;
+     padding: 5px;
+     /*position: absolute;*/
+    }
+ 
+.botao01:after{
+     background: rgba(255, 255, 255, .4);
+     border-radius: 2px;
+     content: "";
+     bottom: 15px;
+     left: 0px;
+     right: 0px;
+     top: 0px;
+     /*position: absolute;*/
+    }
+.botao01:active{
+     box-shadow: inset 0 0 7px rgba(0, 0, 0, .2);
+     top: 4px;
+    }
+    .botao01:active:before{
+     border: none;
+     box-shadow:none;
+    }
+#container {
+	display: inline;
+ 	width: 75%;
+ 	float: left;
+}
+#botao-Tweets {
+	display: inline;
+ 	width: 25%;
+ 	float: right;
+}
+/**************************************************
+Criado por: rplandrade
+GitHub: https://github.com/rplandrade
+**************************************************/
+.rodape{
+	height: 100px;
+	padding: 35px 10%;
+	box-sizing: border-box;
+	background: #00292D;
+}
+.rodape__nav{
+	width: 50%;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	box-sizing: border-box;
+}
+.rodape__nav__lista{
+	margin: 0;
+	padding: 0;
+	display: inline;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	color: #139DA9;
+}
+.nav__lista__link{
+	margin: 0;
+	padding: 0;
+	height: 2.5em;
+	width: 5em;
+	line-height: 2.5em;
+	display: inline-block;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	color: #139DA9;	
+	text-decoration:none; 
+}
+.rodape__infor-rodape{
+	text-align: right;
+	width: 50%;
+	margin: 0 0 0 -4px;
+	padding: 0;
+	display: inline-block;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	color: #139DA9;
+}
